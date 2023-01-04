@@ -1,11 +1,16 @@
 export const FriendList = ({ friends }) => {
   return friends.map(friend => (
-    <li class="item" key={friend.id}>
-      <span class="status">
+    <li className="item" key={friend.id}>
+      <span className="status">
         {friend.isOnline === true ? 'Online' : 'Offline'}
       </span>
-      <img class="avatar" src={friend.avatar} alt="User avatar" width="48" />
-      <p class="name">{friend.name}</p>
+      <img
+        className="avatar"
+        src={friend.avatar}
+        alt="User avatar"
+        width="48"
+      />
+      <p className="name">{friend.name}</p>
     </li>
   ));
 };
