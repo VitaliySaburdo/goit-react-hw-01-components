@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 export const FriendList = ({ friends }) => {
   return friends.map(friend => (
     <li className="item" key={friend.id}>
@@ -13,4 +14,11 @@ export const FriendList = ({ friends }) => {
       <p className="name">{friend.name}</p>
     </li>
   ));
+};
+
+FriendList.propTypes = {
+  id: PropTypes.number,
+  isOnline: PropTypes.bool,
+  name: PropTypes.string,
+  avatar: PropTypes.string,
 };

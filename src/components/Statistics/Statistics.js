@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 export const Statistics = ({ stats }) => {
   return (
     <ul className="stat-list">
@@ -9,4 +10,10 @@ export const Statistics = ({ stats }) => {
       ))}
     </ul>
   );
+};
+
+Statistics.propTypes = {
+  id: PropTypes.string,
+  label: PropTypes.string,
+  percentage: PropTypes.number,
 };
