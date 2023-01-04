@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import PropTypes, { arrayOf } from 'prop-types';
 export const FriendList = ({ friends }) => {
   return friends.map(friend => (
     <li className="item" key={friend.id}>
@@ -21,4 +21,9 @@ FriendList.propTypes = {
   isOnline: PropTypes.bool,
   name: PropTypes.string,
   avatar: PropTypes.string,
+  friends: arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    })
+  ),
 };

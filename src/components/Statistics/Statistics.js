@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import PropTypes, { arrayOf } from 'prop-types';
 export const Statistics = ({ stats }) => {
   return (
     <ul className="stat-list">
@@ -16,4 +16,9 @@ Statistics.propTypes = {
   id: PropTypes.string,
   label: PropTypes.string,
   percentage: PropTypes.number,
+  stats: arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    })
+  ),
 };
