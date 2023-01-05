@@ -1,4 +1,4 @@
-import PropTypes, { arrayOf } from 'prop-types';
+import PropTypes from 'prop-types';
 export const TransactionHistory = ({ items }) => {
   return (
     <table className="transaction-history">
@@ -10,11 +10,11 @@ export const TransactionHistory = ({ items }) => {
         </tr>
       </thead>
       <tbody>
-        {items.map(item => (
-          <tr key={item.id}>
-            <td>{item.type}</td>
-            <td>{item.amount}</td>
-            <td>{item.currency}</td>
+        {items.map(({ id, type, amount, currency }) => (
+          <tr key={id}>
+            <td>{type}</td>
+            <td>{amount}</td>
+            <td>{currency}</td>
           </tr>
         ))}
       </tbody>
@@ -23,13 +23,12 @@ export const TransactionHistory = ({ items }) => {
 };
 
 TransactionHistory.propTypes = {
-  id: PropTypes.string,
-  type: PropTypes.string,
-  amount: PropTypes.string,
-  currency: PropTypes.string,
-  items: arrayOf(
+  items: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
     })
   ),
 };

@@ -1,11 +1,11 @@
-import PropTypes, { arrayOf } from 'prop-types';
+import PropTypes from 'prop-types';
 export const Statistics = ({ stats }) => {
   return (
     <ul className="stat-list">
-      {stats.map(stat => (
-        <li className="item" key={stat.id}>
-          <span className="label">{stat.label}</span>
-          <span className="percentage">{stat.percentage}</span>
+      {stats.map(({ id, label, percentage }) => (
+        <li className="item" key={id}>
+          <span className="label">{label}</span>
+          <span className="percentage">{percentage}</span>
         </li>
       ))}
     </ul>
@@ -13,12 +13,11 @@ export const Statistics = ({ stats }) => {
 };
 
 Statistics.propTypes = {
-  id: PropTypes.string,
-  label: PropTypes.string,
-  percentage: PropTypes.number,
-  stats: arrayOf(
+  stats: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
     })
   ),
 };
