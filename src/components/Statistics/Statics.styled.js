@@ -11,4 +11,24 @@ export const Section = styled.section`
 
 export const Title = styled.h2`
   text-align: center;
+  text-transform: uppercase;
+  margin: 20px;
+`;
+
+export const StatsBox = styled.ul`
+  display: flex;
+  height: 60px;
+`;
+
+export const StatItem = styled.li`
+  display: grid;
+  align-content: center;
+  width: 100%;
+  border: 1px solid grey;
+  /* background-color: #9b9d9e; */
+`;
+
+export const StatTitle = styled.span`
+  margin: 0;
+  text-align: center;
 `;

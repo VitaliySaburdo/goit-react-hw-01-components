@@ -39,10 +39,7 @@ export const InfoBlock = styled.p`
 `;
 
 export const SocialBox = styled.ul`
-  margin: 0;
-  padding: 0;
   display: flex;
-  list-style: none;
   margin-top: 20px;
   height: 80px;
 `;
