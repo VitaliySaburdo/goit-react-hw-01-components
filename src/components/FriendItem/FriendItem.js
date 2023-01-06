@@ -13,6 +13,7 @@ export const FriendItem = ({ friend: { isOnline, avatar, name } }) => {
 
 FriendItem.propTypes = {
   friend: PropTypes.exact({
+    id: PropTypes.number.isRequired,
     isOnline: PropTypes.bool.isRequired,
     name: PropTypes.string.isRequired,
     avatar: PropTypes.string.isRequired,
