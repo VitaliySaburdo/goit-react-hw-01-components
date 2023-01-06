@@ -13,6 +13,7 @@ export const Table = styled.table`
 
 export const Head = styled.thead`
   height: 40px;
+  background-color: grey;
 `;
 export const Colums = styled.td`
   width: 100vh;
@@ -25,5 +26,5 @@ export const ColumsHead = styled.th`
   width: 100vh;
   height: 30px;
   text-align: center;
-  border: 1px solid grey;
+  border: 1px solid black;
 `;
