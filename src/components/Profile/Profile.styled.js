@@ -25,6 +25,7 @@ export const ImgAvatar = styled.img`
   width: 120px;
   height: 120px;
   margin-bottom: 20px;
+  margin-top: 20px;
   border: 1px solid grey;
 `;
 
