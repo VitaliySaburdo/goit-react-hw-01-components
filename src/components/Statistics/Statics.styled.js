@@ -26,7 +26,6 @@ export const StatItem = styled.li`
   width: 100%;
   border: 1px solid grey;
   background-color: aqua;
-  /* background-color: #${Math.floor(Math.random() * 16777215).toString(16)}; */
 `;
 
 export const StatTitle = styled.span`
