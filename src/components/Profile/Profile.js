@@ -1,15 +1,16 @@
 import PropTypes from 'prop-types';
-import { Container, Description, ImgAvatar, InfoBlock } from './Profile.styled';
+import {
+  Container,
+  Description,
+  ImgAvatar,
+  InfoBlock,
+  SocialBox,
+  SocialItem,
+  SocialTitle,
+  SocialInfo,
+} from './Profile.styled';
 
-export const Profile = ({
-  username,
-  tag,
-  location,
-  avatar,
-  followers,
-  views,
-  likes,
-}) => {
+export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
     <Container key={username}>
       <Description>
@@ -18,20 +19,20 @@ export const Profile = ({
         <InfoBlock>{tag}</InfoBlock>
         <InfoBlock>{location}</InfoBlock>
       </Description>
-      <ul className="stats">
-        <li>
-          <span className="label">Followers</span>
-          <span className="quantity">{followers}</span>
-        </li>
-        <li>
-          <span className="label">Views</span>
-          <span className="quantity">{views}</span>
-        </li>
-        <li>
-          <span className="label">Likes</span>
-          <span className="quantity">{likes}</span>
-        </li>
-      </ul>
+      <SocialBox>
+        <SocialItem>
+          <SocialTitle>Followers</SocialTitle>
+          <SocialInfo>{stats.followers}</SocialInfo>
+        </SocialItem>
+        <SocialItem>
+          <SocialTitle>Views</SocialTitle>
+          <SocialInfo>{stats.views}</SocialInfo>
+        </SocialItem>
+        <SocialItem>
+          <SocialTitle>Likes</SocialTitle>
+          <SocialInfo>{stats.likes}</SocialInfo>
+        </SocialItem>
+      </SocialBox>
     </Container>
   );
 };

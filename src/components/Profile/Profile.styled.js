@@ -4,7 +4,9 @@ export const Container = styled.div`
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 200px;
+  width: 210px;
+  border: 1px solid grey;
+  margin-top: 40px;
 `;
 
 export const Description = styled.div`
@@ -23,9 +25,41 @@ export const ImgAvatar = styled.img`
   width: 120px;
   height: 120px;
   margin-bottom: 20px;
+  border: 1px solid grey;
 `;
+
 export const InfoBlock = styled.p`
   margin: 0;
   text-align: center;
   margin-bottom: 10px;
+  :last-child {
+    margin-bottom: 0;
+  }
+`;
+
+export const SocialBox = styled.ul`
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  margin-top: 20px;
+  height: 80px;
+`;
+
+export const SocialItem = styled.li`
+  display: grid;
+  align-content: center;
+  width: 70px;
+  border: 1px solid grey;
+  background-color: #9b9d9e;
+`;
+
+export const SocialTitle = styled.span`
+  margin: 0;
+  text-align: center;
+`;
+
+export const SocialInfo = styled.span`
+  margin: 0;
+  text-align: center;
 `;
