@@ -1,13 +1,18 @@
 import PropTypes from 'prop-types';
+import { Section, ContactBox, Bage } from './FriendList.styled';
 
 export const FriendList = ({ friends }) => {
-  return friends.map(({ id, isOnline, avatar, name }) => (
-    <li className="item" key={id}>
-      <span className="status">{isOnline === true ? 'Online' : 'Offline'}</span>
-      <img className="avatar" src={avatar} alt="User avatar" width="48" />
-      <p className="name">{name}</p>
-    </li>
-  ));
+  return (
+    <Section>
+      {friends.map(({ id, isOnline, avatar, name }) => (
+        <ContactBox key={id}>
+          <Bage isOnline={isOnline}></Bage>
+          <img className="avatar" src={avatar} alt="User avatar" width="48" />
+          <p className="name">{name}</p>
+        </ContactBox>
+      ))}
+    </Section>
+  );
 };
 
 FriendList.propTypes = {

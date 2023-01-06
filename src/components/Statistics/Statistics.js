@@ -12,7 +12,7 @@ export const Statistics = ({ title, stats }) => {
       {title && <Title>{title}</Title>}
       <StatsBox>
         {stats.map(({ id, label, percentage }) => (
-          <StatItem key={id}>
+          <StatItem color={[1, 2, 3, 4]} key={id}>
             <StatTitle>{label}</StatTitle>
             <StatTitle>{percentage}</StatTitle>
           </StatItem>

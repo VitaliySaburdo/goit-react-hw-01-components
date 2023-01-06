@@ -25,7 +25,8 @@ export const StatItem = styled.li`
   align-content: center;
   width: 100%;
   border: 1px solid grey;
-  /* background-color: #9b9d9e; */
+  background-color: aqua;
+  /* background-color: #${Math.floor(Math.random() * 16777215).toString(16)}; */
 `;
 
 export const StatTitle = styled.span`
