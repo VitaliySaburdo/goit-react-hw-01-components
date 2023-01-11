@@ -20,12 +20,16 @@ export const StatsBox = styled.ul`
   height: 60px;
 `;
 
+const backgroundColor = () => {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+};
+
 export const StatItem = styled.li`
   display: grid;
   align-content: center;
   width: 100%;
   border: 1px solid grey;
-  background-color: aqua;
+  background-color: ${backgroundColor};
 `;
 
 export const StatTitle = styled.span`
